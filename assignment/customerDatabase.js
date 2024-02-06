@@ -44,5 +44,18 @@ for (customer of arr) {
 
 let aboveMin = arr.filter((customer) => customer.balance > 1000);
 console.log(
-  `The ones with minimum of 1000 dollars and above is(are): ${aboveMin}`
+  `The one(s) with minimum of 1000 dollars and above is(are): ${aboveMin}`
 );
+
+let listBalance = arr.map(customer => {
+  customer.balance
+})
+
+let sortedBalance = listBlance.sort().reverse();
+
+console.log(`The sorted balance is ${sortedBalance}`);
+
+
+let custInfo = arr.map(customer => {
+  customer.name + "" + customer.balance;
+}
