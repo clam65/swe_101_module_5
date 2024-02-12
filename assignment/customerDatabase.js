@@ -47,6 +47,11 @@ console.log(
   `The one(s) with minimum of 1000 dollars and above is(are): ${aboveMin}`
 );
 
+let findAccountNum = arr.find((customer) => {
+  customer.accountNumber = 231453765;
+})
+console.log(`The account number ${customer.accountNumber} belongs to ${customer.name}`);
+
 let listBalance = arr.map(customer => {
   customer.balance
 })
