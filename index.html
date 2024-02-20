@@ -1,51 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js" defer></script>
   </head>
+
   <body>
-    <h1>Bank Record</h1>
-    <table>
-      <caption>
-        Bank Info
-      </caption>
-      <tbody>
-        <tr>
-          <th>Name</th>
-          <th>Location</th>
-          <th>Revenue</th>
-          <th>Cost</th>
-        </tr>
-        <tr>
-          <td>DBS</td>
-          <td>Marina Bay</td>
-          <td>32000</td>
-          <td>5000</td>
-        </tr>
-        <tr>
-          <td>UOB</td>
-          <td>Raffles Place</td>
-          <td>21000</td>
-          <td>3000</td>
-        </tr>
-        <tr>
-          <td>OCBC</td>
-          <td>Robertson</td>
-          <td>34000</td>
-          <td>4000</td>
-        </tr>
-      </tbody>
-    </table>
-    <hr />
-    <select name="bankSelector" id="bankSelector">
-      <option value="DBS">DBS</option>
-      <option value="UOB">UOB</option>
-      <option value="OCBC">OCBC</option>
-    </select>
-    <input type="number" name="revenue" id="revenue" placeholder="Revenue" />
-    <button id="revenueBtn">Add to Revenue</button>
-    <script src="index.js"></script>
+    <div id="main-container">
+      <div id="calculator">
+        <form>
+          <legend>Calculator</legend>
+          <input type="text" id="display" name="display" disabled />
+          <div id="row-1" class="row">
+            <input
+              type="button"
+              id="AC"
+              value="AC"
+              onclick="document.getElementById('display').value = ''"
+            />
+            <input
+              type="button"
+              id="DE"
+              value="DE"
+              onclick="document.getElementById('display').value = document.getElementById('display').value.toString().slice(0,-1)"
+            />
+            <input
+              type="button"
+              id="."
+              value="."
+              onclick="document.getElementById('display').value += '.'"
+            />
+            <input
+              type="button"
+              id="/"
+              value="/"
+              onclick="document.getElementById('display').value += '/'"
+            />
+          </div>
+          <div id="row-2" class="row">
+            <input
+              type="button"
+              id="7"
+              value="7"
+              onclick="document.getElementById('display').value += '7'"
+            />
+            <input
+              type="button"
+              id="8"
+              value="8"
+              onclick="document.getElementById('display').value += '8'"
+            />
+            <input
+              type="button"
+              id="9"
+              value="9"
+              onclick="document.getElementById('display').value += '9'"
+            />
+            <input
+              type="button"
+              id="*"
+              value="*"
+              onclick="document.getElementById('display').value += '*'"
+            />
+          </div>
+          <div id="row-3" class="row">
+            <input
+              type="button"
+              id="4"
+              value="4"
+              onclick="document.getElementById('display').value += '4'"
+            />
+            <input
+              type="button"
+              id="5"
+              value="5"
+              onclick="document.getElementById('display').value += '5'"
+            />
+            <input
+              type="button"
+              id="6"
+              value="6"
+              onclick="document.getElementById('display').value += '6'"
+            />
+            <input
+              type="button"
+              id="-"
+              value="-"
+              onclick="document.getElementById('display').value += '-'"
+            />
+          </div>
+          <div id="row-4" class="row">
+            <input
+              type="button"
+              id="1"
+              value="1"
+              onclick="document.getElementById('display').value += '1'"
+            />
+            <input
+              type="button"
+              id="2"
+              value="2"
+              onclick="document.getElementById('display').value += '2'"
+            />
+            <input
+              type="button"
+              id="3"
+              value="3"
+              onclick="document.getElementById('display').value += '3'"
+            />
+            <input
+              type="button"
+              id="+"
+              value="+"
+              onclick="document.getElementById('display').value += '+'"
+            />
+          </div>
+          <div id="row-5" class="row">
+            <input
+              type="button"
+              id="00"
+              value="00"
+              onclick="document.getElementById('display').value += '00'"
+            />
+            <input
+              type="button"
+              id="0"
+              value="0"
+              onclick="document.getElementById('display').value += '0'"
+            />
+            <input
+              type="button"
+              id="="
+              value="="
+              onclick="document.getElementById('display').value = eval(document.getElementById('display').value)"
+            />
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
